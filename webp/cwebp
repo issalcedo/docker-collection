@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cwebp() {
+    docker run --rm -a stdin -a stdout -v `pwd`:/usr/local/webp webp cwebp "$@"
+}
+
+cwebp "$@"
